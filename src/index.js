@@ -1,17 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { BrowserRouter} from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import App from './app';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: '#fb3234',
+      main: '#B80000',
+      dark: '#c60000',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#f5f5f5',
+      main: '#f0f0f0',
+      dark: '#979797',
+      contrastText: '#000',
+    }
+  }
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <ThemeProvider theme={theme}>
+      <GoogleReCaptchaProvider reCaptchaKey='6LeprcEpAAAAANoHZ1siaxrLHHosBlhPvVtlKwXw'>
+        <Provider store={store}> 
+        <BrowserRouter>
+          <App/>
+        </BrowserRouter>
+        </Provider>
+      </GoogleReCaptchaProvider>
+    </ThemeProvider>
+);
