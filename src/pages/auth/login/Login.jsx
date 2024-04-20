@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useRef } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -17,7 +16,6 @@ import { authUser } from "../../../store/reducers/userReducer/actions";
 import { connect, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useState,useCallback } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
 import { useGoogleReCaptcha, GoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 const Login = ({ authUser }) => {
