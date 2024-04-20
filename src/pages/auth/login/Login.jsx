@@ -34,7 +34,6 @@ const Login = ({ authUser }) => {
         }
     
         const token = await executeRecaptcha('yourAction');
-        // Do whatever you want with the token
       }, [executeRecaptcha]);
 
     useEffect(() => {
