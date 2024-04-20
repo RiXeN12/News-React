@@ -2,6 +2,7 @@
   "name": "news",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://RiXeN12.github.io/News-React",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
@@ -30,6 +31,8 @@
     "yup": "^1.4.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
