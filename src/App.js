@@ -25,6 +25,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
             <Route index element={<MainPage />}/>
+            <Route path="News-React/" element={<DefaultLayout />}/>
+            <Route path="News-React" element={<DefaultLayout />}/>
             <Route path="login" element={<Login />}/>
             <Route path="register" element={<Register />}/>
             <Route path="editing" element={<EditPage />} />
