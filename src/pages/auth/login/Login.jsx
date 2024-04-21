@@ -18,12 +18,13 @@ import { useEffect } from 'react';
 import { useState,useCallback } from 'react';
 import { useGoogleReCaptcha, GoogleReCaptcha } from 'react-google-recaptcha-v3';
 
+
 const Login = ({ authUser }) => {
     const { executeRecaptcha } = useGoogleReCaptcha();
     const [token, setToken] = useState();
-
-
-    const clientId = "1071227799664-848r4gmtminclfnnoiikek893m974t90.apps.googleusercontent.com";
+    
+    //1071227799664-848r4gmtminclfnnoiikek893m974t90.apps.googleusercontent.com
+    const clientId = "506973554183-v3obhau14cenfpua7jlfj8h9lk71hthf.apps.googleusercontent.com";
     const navigate = useNavigate();
     const { isAuth } = useSelector((state) => state.user);
 
