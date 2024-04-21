@@ -13,6 +13,7 @@ import ITNews from './pages/ITNews/ITNews';
 import Profile from './components/Page/Profile/Profile';
 import { useDispatch } from 'react-redux';
 import { authUser } from './store/reducers/userReducer/actions';
+import Page from './components/Page/Page';
 
 const App = () => {
     const dispatch = useDispatch();
@@ -25,8 +26,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
             <Route index element={<MainPage />}/>
-            <Route path="News-React/" element={<DefaultLayout />}/>
-            <Route path="News-React" element={<DefaultLayout />}/>
+            <Route path="News-React/" element={<Page />}/>
+            <Route path="News-React" element={<Page />}/>
+            <Route path="" element={<Page />}/>
             <Route path="login" element={<Login />}/>
             <Route path="register" element={<Register />}/>
             <Route path="editing" element={<EditPage />} />
