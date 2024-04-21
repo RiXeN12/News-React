@@ -17,12 +17,12 @@ export const loadList = () => {
                     storedDate.getFullYear() === today.getFullYear()) {
                     dispatch({type: 'LOAD_LIST', payload: {list: parsedData.articles, load: false}});
                 } else {
-                    const resp = await https.get("top-headlines?sources=techcrunch&apiKey=bcb80a2aeaba4b49ad82fed10cd0414c");
+                    const resp = await https.get("top-headlines?category=techcrunch&lang=en&country=us&apikey=ec9b90d8575129c998c94b49a56fb273");
                     dispatch({type: 'LOAD_LIST', payload: {list: resp.data.articles, load: false}});
                     localStorage.setItem('loadList', JSON.stringify({articles: resp.data.articles, date: today}));
                 }
             } else {
-                const resp = await https.get("top-headlines?sources=techcrunch&apiKey=bcb80a2aeaba4b49ad82fed10cd0414c");
+                const resp = await https.get("top-headlines?category=techcrunch&lang=en&country=us&apikey=ec9b90d8575129c998c94b49a56fb273");
                 dispatch({type: 'LOAD_LIST', payload: {list: resp.data.articles, load: false}});
                 const today = new Date();
                 localStorage.setItem('loadList', JSON.stringify({articles: resp.data.articles, date: today}));
@@ -49,12 +49,12 @@ export const loadUkraineList = () => {
                     storedDate.getFullYear() === today.getFullYear()) {
                     dispatch({type: 'LOAD_LIST', payload: {list: parsedData.articles, load: false}});
                 } else {
-                    const resp = await https.get("top-headlines?language=uk&apiKey=bcb80a2aeaba4b49ad82fed10cd0414c");
+                    const resp = await https.get("top-headlines?category=techcrunch&lang=uk&country=uk&min=30&apikey=ec9b90d8575129c998c94b49a56fb273");
                     dispatch({type: 'LOAD_LIST', payload: {list: resp.data.articles, load: false}});
                     localStorage.setItem('loadUkraineList', JSON.stringify({articles: resp.data.articles, date: today}));
                 }
             } else {
-                const resp = await https.get("top-headlines?language=uk&apiKey=bcb80a2aeaba4b49ad82fed10cd0414c");
+                const resp = await https.get("top-headlines?category=techcrunch&lang=uk&country=uk&min=30&apikey=ec9b90d8575129c998c94b49a56fb273");
                 dispatch({type: 'LOAD_LIST', payload: {list: resp.data.articles, load: false}});
                 const today = new Date();
                 localStorage.setItem('loadUkraineList', JSON.stringify({articles: resp.data.articles, date: today}));
@@ -81,12 +81,12 @@ export const loadItList = () => {
                     storedDate.getFullYear() === today.getFullYear()) {
                     dispatch({type: 'LOAD_LIST', payload: {list: parsedData.articles, load: false}});
                 } else {
-                    const resp = await https.get("top-headlines?q=it&language=en&apiKey=bcb80a2aeaba4b49ad82fed10cd0414c");
+                    const resp = await https.get("top-headlines?category=it&lang=en&country=en&min=30&apikey=ec9b90d8575129c998c94b49a56fb273");
                     dispatch({type: 'LOAD_LIST', payload: {list: resp.data.articles, load: false}});
                     localStorage.setItem('loadItList', JSON.stringify({articles: resp.data.articles, date: today}));
                 }
             } else {
-                const resp = await https.get("top-headlines?q=it&language=en&apiKey=bcb80a2aeaba4b49ad82fed10cd0414c");
+                const resp = await https.get("top-headlines?category=it&lang=en&country=en&min=30&apikey=ec9b90d8575129c998c94b49a56fb273");
                 dispatch({type: 'LOAD_LIST', payload: {list: resp.data.articles, load: false}});
                 const today = new Date();
                 localStorage.setItem('loadItList', JSON.stringify({articles: resp.data.articles, date: today}));

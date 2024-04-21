@@ -38,11 +38,11 @@ const NewsPage = ({ news }) => {
                                     {selectedNews.publishedAt}
                                 </Typography>
                             </Box>
-                            {selectedNews.urlToImage ? (
+                            {selectedNews.image ? (
                                 <CardMedia
                                     component="img"
                                     sx={{ maxHeight: 450, display: { xs: 'none', sm: 'block' } }}
-                                    image={selectedNews.urlToImage}
+                                    image={selectedNews.image}
                                     alt="image"
                                 />
                             ) : (
@@ -54,7 +54,7 @@ const NewsPage = ({ news }) => {
                                         />
                             )}
                             <Typography gutterBottom color="error" variant="h5">
-                                {"Author: " + (selectedNews.author || "Unknown")}
+                                {"Author: " + (selectedNews.source.name || "Unknown")}
                             </Typography>
                             <Box px={2} mt={2}>
                                 <Typography gutterBottom color={'black'} variant="h5">

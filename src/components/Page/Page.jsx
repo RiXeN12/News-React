@@ -56,7 +56,7 @@ const Page = ({ news, TotalResult, loadList }) => {
                                         component="img"
                                         alt="no image"
                                         height="440"
-                                        image={firstNews.urlToImage}
+                                        image={firstNews.image}
                                     />
                                 </div>
                             </ListItem>
@@ -91,7 +91,7 @@ const Page = ({ news, TotalResult, loadList }) => {
                                         component="img"
                                         alt="no image"
                                         height="240"
-                                        image={article.urlToImage}
+                                        image={article.image}
                                     />
                                     <Typography gutterBottom color="textPrimary" variant="h5" component="div">
                                         {article.title}

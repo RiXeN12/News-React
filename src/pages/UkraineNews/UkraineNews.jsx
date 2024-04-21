@@ -47,12 +47,12 @@ const UkNews = ({ news, TotalResult, loadUkraineList }) => {
                         <Grid item xs={6}>
                             <ListItem>
                                 <div>
-                                    {firstNews.urlToImage ? (
+                                    {firstNews.image ? (
                                         <CardMedia
                                             component="img"
                                             alt="no image"
                                             height="440"
-                                            image={firstNews.urlToImage}
+                                            image={firstNews.image}
                                         />
                                     ) : (
                                         <CardMedia
@@ -91,12 +91,12 @@ const UkNews = ({ news, TotalResult, loadUkraineList }) => {
                         <Grid item xs={4} key={index}>
                             <ListItem>
                                 <CardContent>
-                                    {article.urlToImage ? (
+                                    {article.image ? (
                                         <CardMedia
                                             component="img"
                                             alt="no image"
                                             height="240"
-                                            image={article.urlToImage}
+                                            image={article.image}
                                         />
                                     ) : (
                                         <CardMedia
