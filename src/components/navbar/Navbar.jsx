@@ -20,7 +20,7 @@ import "./style.css";
 const logo = 'React новини';
 const pages = [
     { Title: "Головна", Path: "/" },
-    { Title: "Новини України ", Path: "News-React/ukraine" },
+    { Title: "Новини України ", Path: "ukraine/" },
     { Title: "ІТ Новини", Path: "/it" }
 ];
 
