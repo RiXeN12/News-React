@@ -32,7 +32,7 @@ const App = () => {
             <Route path="login" element={<Login />}/>
             <Route path="register" element={<Register />}/>
             <Route path="editing" element={<EditPage />} />
-            <Route path="ukraine/" element={<UkraineNews />} />
+            <Route path="ukraine" element={<UkraineNews />} />
             <Route path="it" element={<ITNews />} />
             <Route path="list" element={<ListOfUser  />} />
             <Route path="profile" element={<Profile  />} />
