@@ -24,12 +24,12 @@ const theme = createTheme({
     }
   }
 });
-
+//6LeprcEpAAAAANoHZ1siaxrLHHosBlhPvVtlKwXw'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
+//
     <ThemeProvider theme={theme}>
-      <GoogleReCaptchaProvider reCaptchaKey='6LeprcEpAAAAANoHZ1siaxrLHHosBlhPvVtlKwXw'>
+      <GoogleReCaptchaProvider reCaptchaKey='6Lf2asIpAAAAAIaLTkU1CmZV3CPA4Ma_rzeQSxpt'>
         <Provider store={store}> 
         <BrowserRouter>
           <App/>
