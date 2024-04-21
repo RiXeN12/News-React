@@ -69,7 +69,9 @@ const Navbar = ({user, isAuth}) => {
                             textDecoration: 'none',
                         }}
                     >
-                        {logo}
+                        <Link to='/'>
+                                {logo}
+                        </Link>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
